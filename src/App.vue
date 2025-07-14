@@ -244,6 +244,12 @@
 
 <script setup>
 import { ref } from "vue";
+import axios from "axios";
+
+axios.get('http://localhost:8000/api/users')
+.then((response) => {
+  console.log(response);
+})
 
 const isDrawerOpen = ref(false);
 const isDialogOpen = ref(false);
